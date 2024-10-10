@@ -1,0 +1,121 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #2b2d42, #8d99ae); /* Gradiente em tons de azul e roxo */
+    display: flex;
+    flex-direction: column; /* Alinhamento vertical */
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    position: relative; /* Para permitir o posicionamento absoluto do rodapé */
+}
+
+.container {
+    text-align: center;
+    background-color: #7a9bb3; /* Azul mais escuro para o contêiner */
+    padding: 40px;
+    width: 90%; /* Largura ajustada para ser responsiva */
+    max-width: 400px; /* Máximo de 400px para desktops */
+    border-radius: 12px; 
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Sombra suave para profundidade */
+    margin-bottom: 20px; /* Espaço entre o contêiner e o rodapé */
+}
+
+h1 {
+    margin-bottom: 10px; /* Reduzindo o espaço abaixo do título */
+    color: #000000; /* Cor do título alterada para preto */
+}
+
+.nome {
+    color: #000000; /* Cor do nome alterada para preto */
+    font-size: 14px; /* Tamanho da fonte do nome */
+    margin-bottom: 30px; /* Espaço abaixo do nome */
+    font-weight: bold; /* Texto em negrito */
+}
+
+.links {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.link-item {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    padding: 15px;
+    border-radius: 8px;
+    transition: background-color 0.3s;
+    font-weight: bold;
+    background-color: #f9f9f9;
+    color: #000000; /* Cor dos links alterada para preto */
+}
+
+.link-item img {
+    width: 28px;
+    margin-right: 15px;
+}
+
+.link-item:hover {
+    background-color: #ececec;
+}
+
+/* Cores personalizadas para cada link */
+.whatsapp {
+    color: #1EBEA5; /* Verde mais escuro para o WhatsApp */
+    background-color: #E6F7EE; 
+}
+
+.linkedin {
+    color: #0077b5;
+    background-color: #E0F1FB; 
+}
+
+.github {
+    color: #333;
+    background-color: #F3F3F3;
+}
+
+.curriculo {
+    color: #000;
+    background-color: #FDF5E6;
+}
+
+/* Estilo do rodapé */
+footer {
+    position: absolute; /* Posiciona o rodapé no canto */
+    bottom: 10px; /* Distância do fundo da tela */
+    left: 50%; /* Centraliza horizontalmente */
+    transform: translateX(-50%); /* Ajusta a posição para centralizar corretamente */
+}
+
+footer p {
+    color: rgba(255, 255, 255, 0.3); /* Cor com menor opacidade para o rodapé */
+    font-size: 12px; /* Tamanho da fonte do rodapé */
+    font-weight: bold; /* Texto em negrito */
+    text-align: center; /* Centraliza o texto */
+}
+
+/* Media Queries para Responsividade */
+@media (max-width: 480px) {
+    .container {
+        padding: 20px; /* Menos padding em telas menores */
+    }
+
+    h1 {
+        font-size: 24px; /* Tamanho do título ajustado */
+    }
+
+    .nome {
+        font-size: 12px; /* Tamanho da fonte do nome ajustado */
+    }
+
+    .link-item {
+        padding: 10px; /* Menos padding para links em telas menores */
+    }
+}
