@@ -5,37 +5,53 @@
 }
 
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Poppins', Arial, sans-serif; /* Fonte personalizada */
     background: linear-gradient(135deg, #2b2d42, #8d99ae); /* Gradiente em tons de azul e roxo */
     display: flex;
-    flex-direction: column; /* Alinhamento vertical */
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     height: 100vh;
-    position: relative; /* Para permitir o posicionamento absoluto do rodapé */
+    position: relative;
+    animation: fadein 1s ease; /* Animação de fade-in ao carregar a página */
+}
+
+/* Animação de fade-in */
+@keyframes fadein {
+    from { opacity: 0; }
+    to { opacity: 1; }
 }
 
 .container {
     text-align: center;
-    background-color: #7a9bb3; /* Azul mais escuro para o contêiner */
+    background-color: #5d7892; /* Azul mais escuro para contraste */
     padding: 40px;
-    width: 90%; /* Largura ajustada para ser responsiva */
-    max-width: 400px; /* Máximo de 400px para desktops */
+    width: 90%; 
+    max-width: 400px; 
     border-radius: 12px; 
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Sombra suave para profundidade */
-    margin-bottom: 20px; /* Espaço entre o contêiner e o rodapé */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Sombra suave */
+    margin-bottom: 20px; 
 }
 
 h1 {
-    margin-bottom: 10px; /* Reduzindo o espaço abaixo do título */
-    color: #000000; /* Cor do título alterada para preto */
+    font-size: 24px;
+    color: #333;
+    font-weight: 500;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    padding-bottom: 10px;
 }
 
 .nome {
-    color: #000000; /* Cor do nome alterada para preto */
-    font-size: 14px; /* Tamanho da fonte do nome */
-    margin-bottom: 30px; /* Espaço abaixo do nome */
+    font-size: 18px; /* Aumentando o tamanho da fonte */
+    color: #333; /* Cor alterada para um tom mais escuro */
     font-weight: bold; /* Texto em negrito */
+    margin-bottom: 30px;
+    text-transform: capitalize;
+    opacity: 0.8; /* Mantendo a opacidade leve */
+    text-align: right; /* Nome alinhado à direita */
 }
 
 .links {
@@ -47,27 +63,33 @@ h1 {
 .link-item {
     display: flex;
     align-items: center;
+    justify-content: flex-start; /* Mantém o texto à esquerda */
     text-decoration: none;
-    padding: 15px;
-    border-radius: 8px;
-    transition: background-color 0.3s;
+    padding: 15px 25px; 
+    border-radius: 25px; 
+    transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
     font-weight: bold;
     background-color: #f9f9f9;
-    color: #000000; /* Cor dos links alterada para preto */
+    color: #000000; 
+    border: none;
+    cursor: pointer;
 }
 
 .link-item img {
-    width: 28px;
+    width: 40px;
     margin-right: 15px;
+    margin-left: 70px; /* Aumentando a margem à esquerda da imagem */
 }
 
 .link-item:hover {
     background-color: #ececec;
+    transform: translateY(-5px); /* Efeito de elevação ao passar o mouse */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Sombra suave ao passar o mouse */
 }
 
 /* Cores personalizadas para cada link */
 .whatsapp {
-    color: #1EBEA5; /* Verde mais escuro para o WhatsApp */
+    color: #1EBEA5;
     background-color: #E6F7EE; 
 }
 
@@ -86,36 +108,51 @@ h1 {
     background-color: #FDF5E6;
 }
 
+/* Efeitos hover nos ícones */
+/* Efeitos hover nos ícones */
+.linkedin:hover img {
+    filter: none; /* Remove o filtro ao passar o mouse */
+}
+
+.github:hover img {
+    filter: none; /* Remove o filtro ao passar o mouse */
+}
+
+.whatsapp:hover img {
+    filter: none; /* Remove o filtro ao passar o mouse */
+}
+
+
 /* Estilo do rodapé */
 footer {
-    position: absolute; /* Posiciona o rodapé no canto */
-    bottom: 10px; /* Distância do fundo da tela */
-    left: 50%; /* Centraliza horizontalmente */
-    transform: translateX(-50%); /* Ajusta a posição para centralizar corretamente */
+    position: absolute;
+    bottom: 10px; 
+    left: 50%; 
+    transform: translateX(-50%); 
 }
 
 footer p {
-    color: rgba(255, 255, 255, 0.3); /* Cor com menor opacidade para o rodapé */
-    font-size: 12px; /* Tamanho da fonte do rodapé */
-    font-weight: bold; /* Texto em negrito */
-    text-align: center; /* Centraliza o texto */
+    color: rgba(255, 255, 255, 0.3); 
+    font-size: 12px;
+    font-weight: bold;
+    text-align: center;
 }
 
 /* Media Queries para Responsividade */
 @media (max-width: 480px) {
     .container {
-        padding: 20px; /* Menos padding em telas menores */
+        padding: 20px;
     }
 
     h1 {
-        font-size: 24px; /* Tamanho do título ajustado */
+        font-size: 24px;
     }
 
     .nome {
-        font-size: 12px; /* Tamanho da fonte do nome ajustado */
+        font-size: 12px;
     }
 
     .link-item {
-        padding: 10px; /* Menos padding para links em telas menores */
+        padding: 10px;
     }
 }
