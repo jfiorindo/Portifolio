@@ -1,44 +1,258 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Meus Links</title>
-    <link rel="stylesheet" href="style.css">
-    
-    
-    <link rel="icon" href="./Imagens/favicon.ico" type="image/x-icon">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>João Pedro Fiorindo</title>
+  <meta name="description" content="Desenvolvedor Full-Stack. Projetos, contatos e currículo." />
+  <link rel="icon" href="./Imagens/favicon.ico" type="image/x-icon" />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="./style.css" />
+
+  <!-- Ajuste visual do botão de idioma -->
+  <style>
+    .lang-toggle{
+      position: fixed; top: 16px; right: 16px; z-index: 50;
+      height: 40px; padding: 0 12px; border-radius: 12px;
+      font-weight: 700; letter-spacing: .5px;
+      background: #ffffff; color: #0f172a;
+      border: 1px solid rgba(15,23,42,.15);
+      box-shadow: 0 6px 20px rgba(0,0,0,.2);
+    }
+    .lang-toggle:hover{ transform: translateY(-2px); }
+  </style>
 </head>
 <body>
-    <div class="container">
-        <h1><img src="./Imagens/link-icon.png" alt="Links Icon" width="20"> My Links</h1>
-        <p class="nome">João Pedro Fiorindo</p> 
-
-        <div class="links">   
-            <a href="https://linkedin.com/in/joaofiorindo" target="_blank" class="link-item linkedin">
-                <img src="./Imagens/linkedin-icon.png" alt="LinkedIn">
-                LinkedIn
-            </a>
-            
-            <a href="https://github.com/jfiorindo" target="_blank" class="link-item github">
-                <img src="./Imagens/github-icon.png" alt="GitHub">
-                GitHub
-            </a>
-
-            <a href="https://wa.me/+5511998967958" target="_blank" class="link-item whatsapp">
-                <img src="./Imagens/whatsapp-icon.png" alt="WhatsApp">
-                WhatsApp
-            </a>
-            
-            <a href="./docs/curriculo.pdf" target="_blank" class="link-item curriculo">
-                <img src="./Imagens/resume-icon.png" alt="Currículo">
-                Currículo
-            </a>
+  <div class="wrap">
+    <header>
+      <div class="brand">
+        <div class="avatar">JF</div>
+        <div class="title">
+          <h1>João Pedro Fiorindo</h1>
+          <p data-i18n="role">Full-Stack Developer • Back-End Developer</p>
         </div>
+      </div>
+      <div class="social">
+        <!-- Botão de idioma (fixo, branco) -->
+        <button id="langToggle" class="lang-toggle" type="button">EN</button>
+
+        <a class="icon-btn" href="https://linkedin.com/in/joaofiorindo" target="_blank" aria-label="LinkedIn" title="LinkedIn">
+          <svg class="link-icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M4.98 3.5C4.98 4.88 3.86 6 2.5 6S0 4.88 0 3.5 1.12 1 2.5 1s2.48 1.12 2.48 2.5zM.5 8h4V24h-4V8zm7.5 0h3.8v2.2h.05c.53-1 1.84-2.2 3.8-2.2 4.06 0 4.8 2.7 4.8 6.2V24h-4v-7c0-1.67-.03-3.83-2.33-3.83-2.33 0-2.69 1.82-2.69 3.7V24h-4V8z"/></svg>
+        </a>
+        <a class="icon-btn" href="https://github.com/jfiorindo" target="_blank" aria-label="GitHub" title="GitHub">
+          <svg class="link-icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2C6.48 2 2 6.58 2 12.26c0 4.52 2.87 8.36 6.84 9.72.5.1.68-.22.68-.49 0-.24-.01-.87-.01-1.71-2.78.61-3.37-1.37-3.37-1.37-.45-1.18-1.1-1.5-1.1-1.5-.9-.64.07-.63.07-.63 1 .07 1.53 1.06 1.53 1.06.89 1.56 2.34 1.11 2.91.85.09-.66.35-1.11.63-1.37-2.22-.26-4.55-1.14-4.55-5.08 0-1.12.39-2.03 1.03-2.75-.1-.26-.45-1.32.1-2.75 0 0 .84-.27 2.75 1.05A9.3 9.3 0 0 1 12 7.1c.85 0 1.7.11 2.5.32 1.9-1.32 2.74-1.05 2.74-1.05.56 1.43.21 2.49.11 2.75.64.72 1.02 1.63 1.02 2.75 0 3.95-2.34 4.81-4.57 5.07.36.31.68.92.68 1.86 0 1.35-.01 2.44-.01 2.77 0 .27.18.6.69.49A10.26 10.26 0 0 0 22 12.26C22 6.58 17.52 2 12 2z"/></svg>
+        </a>
+        <a class="icon-btn" href="https://wa.me/+5511998967958" target="_blank" aria-label="WhatsApp" title="WhatsApp">
+          <svg class="link-icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.52 3.48A11.86 11.86 0 0 0 12.02 0C5.42.02.1 5.34.12 11.94c.01 2.1.56 4.15 1.62 5.95L0 24l6.26-1.64a11.86 11.86 0 0 0 5.76 1.47h.05c6.6 0 11.93-5.32 11.95-11.92.01-3.2-1.24-6.21-3.5-8.43zM12.07 21.3h-.04c-1.82 0-3.6-.49-5.16-1.42l-.37-.22-3.72 .98.99-3.63-.24-.37a9.69 9.69 0 0 1-1.52-5.16C2 6.44 6.45 2 12.05 2c2.58 0 5 1 6.83 2.8 1.82 1.78 2.83 4.16 2.82 6.69-.02 5.58-4.55 10.11-10.63 10.11z"/></svg>
+        </a>
+        <a class="icon-btn" data-href-pt="./docs/curriculo.pdf" data-href-en="./docs/curriculo_en.pdf" target="_blank" aria-label="Currículo PDF" title="Currículo PDF">
+          <svg class="link-icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6"/></svg>
+        </a>
+      </div>
+    </header>
+
+    <section class="hero" aria-labelledby="intro">
+      <h2 id="intro" data-i18n="hero.title">Construo soluções funcionais com código limpo e foco em produto.</h2>
+      <p data-i18n="hero.subtitle">Experiência com JavaScript/TypeScript, Flutter, Python, Node, PHP, bancos de dados e um pouco de Java. Gosto de integrar hardware e software e manter interfaces simples e bonitas.</p>
+      <div class="badges" aria-label="Tecnologias principais">
+        <span class="badge">JavaScript</span>
+        <span class="badge">Flutter</span>
+        <span class="badge">Node</span>
+        <span class="badge">Python</span>
+        <span class="badge">SQL</span>
+        <span class="badge">MongoDB</span>
+        <span class="badge">Node.JS</span>
+        <span class="badge">Java</span>
+
+      </div>
+
+      <div class="links" aria-label="Atalhos">
+        <a class="link-card" href="https://linkedin.com/in/joaofiorindo" target="_blank">
+          <svg class="link-icon" viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M4.98 3.5C4.98 4.88 3.86 6 2.5 6S0 4.88 0 3.5 1.12 1 2.5 1s2.48 1.12 2.48 2.5zM.5 8h4V24h-4V8zm7.5 0h3.8v2.2h.05c.53-1 1.84-2.2 3.8-2.2 4.06 0 4.8 2.7 4.8 6.2V24h-4v-7c0-1.67-.03-3.83-2.33-3.83-2.33 0-2.69 1.82-2.69 3.7V24h-4V8z" fill="currentColor"/>
+          </svg>
+          <strong data-i18n="link.linkedin">LinkedIn</strong>
+        </a>
+
+        <a class="link-card" href="https://github.com/jfiorindo" target="_blank">
+          <svg class="link-icon" viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M12 2C6.48 2 2 6.58 2 12.26c0 4.52 2.87 8.36 6.84 9.72.5.1.68-.22.68-.49 0-.24-.01-.87-.01-1.71-2.78.61-3.37-1.37-3.37-1.37-.45-1.18-1.1-1.5-1.1-1.5-.9-.64.07-.63.07-.63 1 .07 1.53 1.06 1.53 1.06.89 1.56 2.34 1.11 2.91.85.09-.66.35-1.11.63-1.37-2.22-.26-4.55-1.14-4.55-5.08 0-1.12.39-2.03 1.03-2.75-.1-.26-.45-1.32.1-2.75 0 0 .84-.27 2.75 1.05A9.3 9.3 0 0 1 12 7.1c.85 0 1.7.11 2.5.32 1.9-1.32 2.74-1.05 2.74-1.05.56 1.43.21 2.49.11 2.75.64.72 1.02 1.63 1.02 2.75 0 3.95-2.34 4.81-4.57 5.07.36.31.68.92.68 1.86 0 1.35-.01 2.44-.01 2.77 0 .27.18.6.69.49A10.26 10.26 0 0 0 22 12.26C22 6.58 17.52 2 12 2z" fill="currentColor"/>
+          </svg>
+          <strong data-i18n="link.github">GitHub</strong>
+        </a>
+
+        <a class="link-card" href="https://wa.me/+5511998967958" target="_blank">
+          <svg class="link-icon" viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M20.52 3.48A11.86 11.86 0 0 0 12.02 0C5.42.02.1 5.34.12 11.94c.01 2.1.56 4.15 1.62 5.95L0 24l6.26-1.64a11.86 11.86 0 0 0 5.76 1.47h.05c6.6 0 11.93-5.32 11.95-11.92.01-3.2-1.24-6.21-3.5-8.43zM12.07 21.3h-.04c-1.82 0-3.6-.49-5.16-1.42l-.37-.22-3.72.98.99-3.63-.24-.37a9.69 9.69 0 0 1-1.52-5.16C2 6.44 6.45 2 12.05 2c2.58 0 5 1 6.83 2.8 1.82 1.78 2.83 4.16 2.82 6.69-.02 5.58-4.55 10.11-10.63 10.11z" fill="currentColor"/>
+            <path d="M17.2 14.25c-.3-.15-1.79-.88-2.07-.98-.29-.1-.5-.15-.7.15-.2.3-.8.97-.98 1.17-.18.2-.36.22-.66.07-.3-.15-1.26-.46-2.4-1.46-.89-.79-1.49-1.76-1.66-2.06-.17-.3-.02-.47.13-.62.13-.13.3-.33.44-.49.15-.16.2-.27.3-.46.1-.2.05-.36-.02-.51-.07-.15-.7-1.69-.96-2.31-.25-.6-.5-.52-.7-.53l-.6-.01c-.2 0-.5.07-.76.36-.26.29-1 1-1 2.44 0 1.44 1.02 2.83 1.16 3.03.15.2 2 3.2 4.9 4.48.68.29 1.2.47 1.62.6.68.22 1.3.19 1.79.12.55-.08 1.79-.73 2.04-1.44.26-.71.26-1.31.18-1.44-.08-.13-.3-.2-.6-.35z" fill="currentColor"/>
+          </svg>
+          <strong data-i18n="link.whatsapp">WhatsApp</strong>
+        </a>
+
+        <a id="resumeLink"
+          class="link-card"
+          data-href-pt="./docs/curriculo.pdf"
+          data-href-en="./docs/curriculo_en.pdf"
+          target="_blank" rel="noopener">
+          <svg class="link-icon" viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" fill="currentColor"/>
+            <path d="M14 2v6h6" fill="currentColor"/>
+          </svg>
+          <strong data-i18n="link.resume">Currículo</strong>
+        </a>
+      </div>
+
+    </section>
+
+    <div class="section">
+      <h3 data-i18n="projects.title">Projetos em destaque</h3>
+    </div>
+
+    <!-- Grade fixa 2x2 com 4 repositórios -->
+    <div class="grid" role="list">
+      <article class="card" role="listitem">
+        <div class="pill">Vue.js 3</div>
+        <div class="pill">Flask</div>
+        <div class="pill">MongoDB</div>
+        <h4>DeeperSystems</h4>
+        <p data-i18n="repo.deeper.desc">Aplicação CRUD Full Stack desenvolvida com Vue.js 3, Flask e MongoDB. Inclui importação de dados JSON, gerenciamento de usuários baseado em funções e uma interface de usuário responsiva usando PrimeVue. Desenvolvido como parte de um desafio técnico.</p>
+        <div class="actions">
+          <a class="btn" href="https://github.com/jfiorindo/DeeperSystems" target="_blank" aria-label="Ver no GitHub">GitHub</a>
+        </div>
+      </article>
+
+      <article class="card" role="listitem">
+        <div class="pill">Laravel Breeze</div>
+        <div class="pill">Vue.js</div>
+        <div class="pill">Inertia.js</div>
+        <div class="pill">SQLite</div>
+        <h4>to-do-laravel-vuejs</h4>
+        <p data-i18n="repo.todolara.desc">Aplicação web full-stack com Laravel e Vue.js para gerenciamento de tarefas com autenticação de usuários, controle de permissões e interface interativa.</p>
+        <div class="actions">
+          <a class="btn" href="https://github.com/jfiorindo/to-do-laravel-vuejs" target="_blank" aria-label="Ver no GitHub">GitHub</a>
+        </div>
+      </article>
+
+      <article class="card" role="listitem">
+        <div class="pill">React</div>
+        <div class="pill">Node.js</div>
+        <div class="pill">MongoDB</div>
+        <h4>todo-app</h4>
+        <p data-i18n="repo.todoapp.desc">Aplicativo de tarefas com login, organizando commits e branches.</p>
+        <div class="actions">
+          <a class="btn" href="https://github.com/jfiorindo/todo-app" target="_blank" aria-label="Ver no GitHub">GitHub</a>
+        </div>
+      </article>
+
+      <article class="card" role="listitem">
+        <div class="pill">HTML</div>
+        <div class="pill">CSS</div>
+        <div class="pill">JavScript</div>
+        <h4>meuslinks</h4>
+        <p data-i18n="repo.meuslinks.desc">Página de portifólio desenvolvida com ChatGPT</p>
+        <div class="actions">
+          <a class="btn" href="https://github.com/jfiorindo/meuslinks" target="_blank" aria-label="Ver no GitHub">GitHub</a>
+        </div>
+      </article>
     </div>
 
     <footer>
-        <p>Developed by João Pedro Fiorindo using ChatGPT</p>
+      <p>© <span id="year"></span> João Pedro Fiorindo</p>
     </footer>
+  </div>
+
+  <script>
+    // Atualiza o ano
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    const I18N = {
+      'pt-BR': {
+        role: 'Full-Stack Developer • Back-End Developer',
+        'hero.title': 'Construo soluções funcionais com código limpo e foco em produto.',
+        'hero.subtitle':
+          'Experiência com JavaScript/TypeScript, Flutter, Python, Node, PHP, um pouco de Java e bancos de dados. Gosto de integrar hardware e software e manter interfaces simples e bonitas.',
+        'link.linkedin': 'LinkedIn',
+        'link.github': 'GitHub',
+        'link.whatsapp': 'WhatsApp',
+        'link.resume': 'Currículo',
+        'projects.title': 'Projetos em destaque',
+        'repo.deeper.desc':
+          'Aplicação CRUD Full Stack desenvolvida com Vue.js 3, Flask e MongoDB. Inclui importação de dados JSON, gerenciamento de usuários baseado em funções e uma interface de usuário responsiva usando PrimeVue. Desenvolvido como parte de um desafio técnico.',
+        'repo.todolara.desc':
+          'Aplicação web full-stack com Laravel e Vue.js para gerenciamento de tarefas com autenticação de usuários, controle de permissões e interface interativa.',
+        'repo.todoapp.desc': 'Aplicativo de tarefas com login, organizando commits e branches.',
+        'repo.meuslinks.desc': 'Página de portifólio desenvolvida com ChatGPT'
+      },
+      en: {
+        role: 'Full-Stack Developer • Back-End Developer',
+        'hero.title': 'I build functional solutions with clean code and product focus.',
+        'hero.subtitle':
+          'Experience with JavaScript/TypeScript, Flutter, Python, Node, PHP, databases and some Java. I like to integrate hardware and software and keep interfaces simple and beautiful.',
+        'link.linkedin': 'LinkedIn',
+        'link.github': 'GitHub',
+        'link.whatsapp': 'WhatsApp',
+        'link.resume': 'Resume',
+        'projects.title': 'Featured projects',
+        'repo.deeper.desc':
+          'Full-stack CRUD application built with Vue.js 3, Flask, and MongoDB. Includes JSON import, role-based user management, and a responsive UI using PrimeVue. Built as part of a technical challenge.',
+        'repo.todolara.desc':
+          'Full-stack web application with Laravel and Vue.js for task management, featuring user authentication, permission control, and an interactive interface.',
+        'repo.todoapp.desc': 'Task app with login, organizing commits and branches.',
+        'repo.meuslinks.desc': 'Portfolio page developed with ChatGPT'
+      }
+    };
+
+    function applyLang(lang) {
+      const dict = I18N[lang] || I18N['pt-BR'];
+      document.documentElement.lang = lang === 'en' ? 'en' : 'pt-BR';
+      
+      document.querySelectorAll('[data-i18n]').forEach(el => {
+        const key = el.getAttribute('data-i18n');
+        if (dict[key] !== undefined) el.textContent = dict[key];
+      });
+
+      // Botão para alternar idioma
+      const btn = document.getElementById('langToggle');
+      if (btn) btn.textContent = lang === 'en' ? 'PT-BR' : 'EN';
+
+      // Atualiza link do currículo
+      const resumeEl = document.getElementById('resumeLink');
+      if (resumeEl) {
+        const href = lang === 'en' ? resumeEl.dataset.hrefEn : resumeEl.dataset.hrefPt;
+        resumeEl.setAttribute('href', href);
+        const label = lang === 'en' ? 'Resume (PDF)' : 'Currículo (PDF)';
+        resumeEl.setAttribute('aria-label', label);
+        resumeEl.setAttribute('title', label);
+      }
+
+      document.querySelectorAll('a[data-href-pt][data-href-en]').forEach(el => {
+        const href = lang === 'en' ? el.dataset.hrefEn : el.dataset.hrefPt;
+        el.setAttribute('href', href);
+
+        const label = lang === 'en' ? 'Resume (PDF)' : 'Currículo (PDF)';
+        el.setAttribute('aria-label', label);
+        el.setAttribute('title', label);
+      });
+
+      localStorage.setItem('lang', lang);
+    }
+
+    // Toggle EN/PT-BR
+    document.getElementById('langToggle').addEventListener('click', () => {
+      const current = localStorage.getItem('lang') || 'pt-BR';
+      const next = current === 'pt-BR' ? 'en' : 'pt-BR';
+      applyLang(next);
+    });
+
+
+    // Inicializa com idioma salvo
+    applyLang(localStorage.getItem('lang') || 'pt-BR');
+  </script>
 </body>
 </html>
